@@ -1,29 +1,29 @@
-SmartFrame
+Miroir magique
 ===================
 
 
 
 > "Oh mais tu ne prends jamais le temps de m'appeler." - Mamy
->"Tu es toujours occupé je n'ose plus t'appeler" - Papy
+>"Tu es toujours occupÃ© je n'ose plus t'appeler" - Papy
 
-Le cadre connecté SmartFrame permet aux grand-parents/parents d'avoir des nouvelles de leurs petits enfants sans avoir à les déranger. 
+Le cadre connectÃ© SmartFrame permet aux grand-parents/parents d'avoir des nouvelles de leurs petits enfants sans avoir Ã  les dÃ©ranger. 
 
 ---
 Description
 -------------
 </i>*Qu'affiche la SmartFrame?*
-Le SmartFrame peut afficher une photo ainsi qu'un message associé à celle-ci
+Le SmartFrame peut afficher une photo ainsi qu'un message associÃ© Ã  celle-ci
 
 
 
 *Comment mes grands-parents peuvent l'utiliser?*
-Vos grands-parents ont juste à venir et regarder le cadre, comme un simple cadre finalement.
+Vos grands-parents ont juste Ã  venir et regarder le cadre, comme un simple cadre finalement.
 
 *Comment mes petits enfants l'utilise?*
-Vos petits-enfants vont recevoir une notification sur leur téléphone, leur permettant de vous envoyer une image ainsi qu'un message. Ainsi ils ont juste à choisir une image et de personnaliser le message.
+Vos petits-enfants vont recevoir une notification sur leur tÃ©lÃ©phone, leur permettant de vous envoyer une image ainsi qu'un message. Ainsi ils ont juste Ã  choisir une image et de personnaliser le message.
 
-<i class="icon-cog"></i> *Comment ça marche?*
-Le SmartFrame est équipé d'une LED, qui clignote, afin de prévenir si le contenu de cadre a changé. Elle possède également un caméra permettant de savoir si une personne a regardé le cadre sans que celle-ci est à interagir de manière directe avec l'utilisateur.
+<i class="icon-cog"></i> *Comment Ã§a marche?*
+Le SmartFrame est Ã©quipÃ© d'une LED, qui clignote, afin de prÃ©venir si le contenu de cadre a changÃ©. Elle possÃ¨de Ã©galement un camÃ©ra permettant de savoir si une personne a regardÃ© le cadre sans que celle-ci est Ã  interagir de maniÃ¨re directe avec l'utilisateur.
 
-Prenons l'exemple de la famille X. La grand-mère aime avoir des nouvelles régulièrement de ses 2 petits-enfants. Cependant ils sont généralement très occupés, c'est donc assez dur de les joindre. En s'appuyant sur leurs agendas (google, ou autre) une notification leur proposant d'envoyer une photo ainsi qu'un message à leur grand-mère (adorée) leur sera envoyée. Une fois ceux-ci reçus sur le cadre une led se met à clignoter pour signaler un changement de contenu. On peut également imaginer une autre manière de prévenir du changement de contenu (sonnerie, interaction avec la télé, etc..). La caméra nous signalera quand la grand-mère a vu le nouveau contenu afin de recommencer le processus (envoie d'une notifications aux petits enfants, changement de contenu, notification du changement de contenu, détection de la visualisation du nouveau contenu, ...)
+Prenons l'exemple de la famille X. La grand-mÃ¨re aime avoir des nouvelles rÃ©guliÃ¨rement de ses 2 petits-enfants. Cependant ils sont gÃ©nÃ©ralement trÃ¨s occupÃ©s, c'est donc assez dur de les joindre. En s'appuyant sur leurs agendas (google, ou autre) une notification leur proposant d'envoyer une photo ainsi qu'un message Ã  leur grand-mÃ¨re (adorÃ©e) leur sera envoyÃ©e. Une fois ceux-ci reÃ§us sur le cadre une led se met Ã  clignoter pour signaler un changement de contenu. On peut Ã©galement imaginer une autre maniÃ¨re de prÃ©venir du changement de contenu (sonnerie, interaction avec la tÃ©lÃ©, etc..). La camÃ©ra nous signalera quand la grand-mÃ¨re a vu le nouveau contenu afin de recommencer le processus (envoie d'une notifications aux petits enfants, changement de contenu, notification du changement de contenu, dÃ©tection de la visualisation du nouveau contenu, ...)
 
