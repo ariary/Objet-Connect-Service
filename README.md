@@ -1,9 +1,11 @@
 Miroir magique
 ===================
-
 ---
 Groupe
 -------------
+- Rabenandrasana Antoine,antoine.rabenandrasana@etu.unice.fr,
+- Chebaane Meriem, meriem.chebaane@etu.unice.fr, IAM
+- Ben Aouicha Zeineb, zeineb.benaouicha@esprit.tn, IAM
 
 > "Oh mais tu ne prends jamais le temps de m'appeler." - Mamy
 >"Tu es toujours occupé je n'ose plus t'appeler" - Papy
