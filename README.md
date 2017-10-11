@@ -6,7 +6,11 @@ Miroir magique
 > "Oh mais tu ne prends jamais le temps de m'appeler." - Mamy
 >"Tu es toujours occupé je n'ose plus t'appeler" - Papy
 
-Le cadre connecté SmartFrame permet aux grand-parents/parents d'avoir des nouvelles de leurs petits enfants sans avoir à les déranger. 
+Le cadre connecté SmartFrame permet aux grand-parents/parents d'avoir des nouvelles de leurs petits enfants sans avoir à les déranger.
+
+---
+Groupe
+-------------
 
 ---
 Description
