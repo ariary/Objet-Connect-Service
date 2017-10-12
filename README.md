@@ -45,14 +45,10 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 
 
 
-##Versions
+## Versions
 
-
-
-###Version 1
+### Version 1
 (à définir)
 
-
-
-##Croquis
+## Croquis
 
