@@ -56,6 +56,9 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 
 </p>
 
+
+## Equipements TIC :
+
 ##Versions
 
 
