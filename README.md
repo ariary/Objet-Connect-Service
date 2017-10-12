@@ -1,4 +1,3 @@
-﻿# Magic Miror
 <p align="center">
 
 !![logo](https://github.com/ariary/Objet-Connect-Service/blob/master/Untitled%20(2).png)
