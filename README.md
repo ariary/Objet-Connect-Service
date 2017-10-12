@@ -4,6 +4,7 @@
 
 </p>
 
+Votre assistant domestique personnalisé 
 ===================
 ---
 Groupe
