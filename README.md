@@ -66,14 +66,12 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 |   |   |
 |   |   |
 
-##Versions
+## Versions
 
 
 
-###Version 1
-(à définir)
+### Version 1
+On va équiper la Raspberry d'une LED, lorsque la Rasberry reçoit un mail on allume la LED.
 
 
-
-##Croquis
 
