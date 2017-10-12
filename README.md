@@ -59,8 +59,10 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 
 ## Equipements TIC :
 
-| First Header  | Second Header |
-| ------------- | ------------- |
+|  EQUIPEMENTS  |   QUANTITE    | PRIX UNITAIRE |             LIEN           |
+| ------------- | ------------- | ------------- | -------------------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
