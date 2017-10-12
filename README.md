@@ -1,4 +1,6 @@
-Miroir magique
+﻿# Magic Miror
+
+
 ===================
 ---
 Groupe
@@ -7,29 +9,50 @@ Groupe
 - Chebaane Meriem, meriem.chebaane@etu.unice.fr, IAM
 - Ben Aouicha Zeineb, zeineb.benaouicha@esprit.tn, IAM
 
-> "Oh mais tu ne prends jamais le temps de m'appeler." - Mamy
->"Tu es toujours occupé je n'ose plus t'appeler" - Papy
-
-Le cadre connecté SmartFrame permet aux grand-parents/parents d'avoir des nouvelles de leurs petits enfants sans avoir à les déranger.
 
 
-
----
-Description
--------------
-</i>*Qu'affiche la SmartFrame?*
-Le SmartFrame peut afficher une photo ainsi qu'un message associé à celle-ci
+Le miroir Magique est objet fait pour faciliter le quotidien sans pour autant être trop intrusif dans la vie des utilisateurs. 
 
 
+*C'est-à-dire ?*
 
-*Comment mes grands-parents peuvent l'utiliser?*
-Vos grands-parents ont juste à venir et regarder le cadre, comme un simple cadre finalement.
+En se connectant a divers services web (comme la météo, les bus, les mails), des informations vont être choisis et afficher sur le miroir. 
 
-*Comment mes petits enfants l'utilise?*
-Vos petits-enfants vont recevoir une notification sur leur téléphone, leur permettant de vous envoyer une image ainsi qu'un message. Ainsi ils ont juste à choisir une image et de personnaliser le message.
 
-<i class="icon-cog"></i> *Comment ça marche?*
-Le SmartFrame est équipé d'une LED, qui clignote, afin de prévenir si le contenu de cadre a changé. Elle possède également un caméra permettant de savoir si une personne a regardé le cadre sans que celle-ci est à interagir de manière directe avec l'utilisateur.
+*Comment ça fonctionne ?*
+ 
+Le miroir est équipé d'une caméra permettant de savoir si une personne se regarde dans le miroir. Le but à terme étant de mettre un algorithme de reconnaissance faciale afin de fournir des informations plus personnalisées, on peut aussi imaginer mettre en place un capteur de présence. Ceci permettrait de ne pas faire tourner la camera et donc l'algorithme en permanence et ainsi de les declencher qu'en cas de présence. 
 
-Prenons l'exemple de la famille X. La grand-mère aime avoir des nouvelles régulièrement de ses 2 petits-enfants. Cependant ils sont généralement très occupés, c'est donc assez dur de les joindre. En s'appuyant sur leurs agendas (google, ou autre) une notification leur proposant d'envoyer une photo ainsi qu'un message à leur grand-mère (adorée) leur sera envoyée. Une fois ceux-ci reçus sur le cadre une led se met à clignoter pour signaler un changement de contenu. On peut également imaginer une autre manière de prévenir du changement de contenu (sonnerie, interaction avec la télé, etc..). La caméra nous signalera quand la grand-mère a vu le nouveau contenu afin de recommencer le processus (envoie d'une notifications aux petits enfants, changement de contenu, notification du changement de contenu, détection de la visualisation du nouveau contenu, ...)
+
+
+Une fois que l'on sait qu'une personne se regarde dans le miroir, on affiche sur le miroir les informations / services.
+
+
+
+## Scénarios d'utilisations 
+
+
+### Scénario 1 
+
+Thomas X est un employé chez TopExport. Chaque matin il prend le bus pour aller au travail. Son rituel est simple : réveil, petit dej', douche, vêtements, bus..  Mais ce matin le traffic est fluide. Le serveur de Magic Miror reçoit cette informations et se rend compte qu'en prenant le bus d'après Thomas sera quand même a l'heure. Lorsque Thomas sortira de la douche et qu'il se regardera dans le miroir, une notification lui signalera qu'il peut prendre son temps et lui indiquira l'horaire du bus inverse.  (On peut également penser au scénario inverse, Thomas est en retard.  Dans ce cas le miroir pourrait lui proposer d'envoyer un message aux participants de son rendez-vous pour leurs annoncer le retard) 
+Web-service utilisés : Agenda, Info trafic, horaire bus 
+
+
+
+### Scénario 2
+
+Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose pas appeler ses petits enfants trop souvent, elle a peur de les déranger. Magic Miror permet à ses petits enfants de lui envoyer un message et/ou une image qui lui seront affichés sur le miroir lorsqu'elle se regardera.
+
+
+
+##Versions
+
+
+
+###Version 1
+(à définir)
+
+
+
+##Croquis
 
