@@ -9,9 +9,9 @@ Groupe
 - Chebaane Meriem, meriem.chebaane@etu.unice.fr, IAM
 - Ben Aouicha Zeineb, zeineb.benaouicha@esprit.tn, IAM
 
-
-
-Le miroir Magique est objet fait pour faciliter le quotidien sans pour autant être trop intrusif dans la vie des utilisateurs. 
+## Contexte général
+*Est ce qu'un miroir peut être intelligent? *
+Aujourd'hui la plupart des gens vivent avec un chronomètre à la main: il faut faire se laver les dents, il faut manger, il faut faire plein de choses et dans la salle de bain ou dans l'entrée là où vous avez un petit miroir où on passe un petit pe de temps.D'où L'idée d'un miroir Magique qui permet de faciliter le quotidien sans pour autant être trop intrusif dans la vie des utilisateurs. 
 
 
 *C'est-à-dire ?*
@@ -45,10 +45,14 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 
 
 
-## Versions
+##Versions
 
-### Version 1
+
+
+###Version 1
 (à définir)
 
-## Croquis
+
+
+##Croquis
 
