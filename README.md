@@ -44,7 +44,11 @@ Web-service utilisés : Agenda, Info trafic, horaire bus
 
 Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose pas appeler ses petits enfants trop souvent, elle a peur de les déranger. Magic Miror permet à ses petits enfants de lui envoyer un message et/ou une image qui lui seront affichés sur le miroir lorsqu'elle se regardera.
 
+<p align="center">
 
+!![Miroir Magic](https://github.com/ariary/Objet-Connect-Service/blob/master/miroir%20magique.png)
+
+</p>
 
 ##Versions
 
