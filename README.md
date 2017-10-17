@@ -71,7 +71,9 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 
 
 ### Version 1
-On va équiper la Raspberry d'une LED, lorsque la Rasberry reçoit un mail on allume la LED.
 
+On va équiper la Rasberry d'un bouton.
+- lorsque la Raspberry reçoit un mail, elle l'affiche dans le terminal
+- lorsque l'on appui sur le bouton la Raspberry envoie un mail
 
 
