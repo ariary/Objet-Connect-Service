@@ -72,8 +72,7 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 
 ### Version 1
 
-On va équiper la Rasberry d'un bouton.
-- La Rasberry reçoit l'état du traffic qui a été récupérer par le serveur, elle l'affiche dans le terminal
-- lorsque l'on appuie sur le bouton la Raspberry le signal au serveur qui se charge d'envoyer un mail
+On va équiper la Rasberry d'un bouton (capteur) et une led (actionneur).
+- En appuiant sur le bouton, la Raspberry signal le serveur et le demande de se connecte au API Distance Matrix (de Google) pour récupérer les informations trafique en temps réel. Une fois que les données sont récupérées (sous forme JSON), le serveur les transmet au raspberry qui par la suite allume la led.
 
 
