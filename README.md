@@ -73,7 +73,7 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 ### Version 1
 
 On va équiper la Rasberry d'un bouton.
-- La Rasberry reçoit l'état du traffic, elle l'affiche dans le terminal
-- lorsque l'on appui sur le bouton la Raspberry envoie un mail
+- La Rasberry reçoit l'état du traffic qui a été récupérer par le serveur, elle l'affiche dans le terminal
+- lorsque l'on appuie sur le bouton la Raspberry le signal au serveur qui se charge d'envoyer un mail
 
 
