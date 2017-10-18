@@ -72,7 +72,14 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 
 ### Version 1
 
-On va équiper la Rasberry d'un bouton (capteur) et une led (actionneur).
-- En appuiant sur le bouton, la Raspberry signal le serveur et le demande de se connecte au API Distance Matrix (de Google) pour récupérer les informations trafique en temps réel. Une fois que les données sont récupérées (sous forme JSON), le serveur les transmet au raspberry qui par la suite allume la led.
+On va équiper la Rasberry d'un bouton (capteur) et une led (actionneur).En appuiant sur le bouton, la Raspberry signal le serveur et le demande de se connecte au API Distance Matrix (de Google) pour récupérer les informations trafiques en temps réel. Une fois que les données sont récupérées (sous forme JSON), le serveur les transmet au raspberry qui par la suite allume la led.
 
+### Version 2
+
+Dans ce sprint, on ajoute un simple traitement sur les données collectées:
+
+- Détecte un utilisateur   --->   Afficher les informations trafiques sur la miroir
+- Pas d'utilisateur        --->   Rien est afficher sur la miroir
+
+Tout d'abords, on remplace le bouton par un capteur de présence qui joue le rôle de la caméra jusqu'à présent. Dès que le capteur de présence détecte l'utilisateur, le Raspberry envoie au serveur une requète pour récupérer les informations trafiques. Le serveur se connecte au API et envoie les informations demandées qui sera affichée sur l'écran jusqu'à le capteur de présence ne détecte plus l'utilisateur.
 
