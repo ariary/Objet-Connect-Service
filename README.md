@@ -61,10 +61,14 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 
 |  EQUIPEMENTS  |   QUANTITE    | PRIX UNITAIRE |             LIEN           |
 | ------------- | ------------- | ------------- | -------------------------- |
-|  Raspberry Pi 3	     |  1   |27.6€ |livré|
-|  GrovePi | 1    |24.9€|livré|
-|  SD Carte |  1 |9.80€|livré|
-|   |   |
+|  Raspberry Pi 3	     |  1   |  27.6€ |livré|
+|  GrovePi | 1   |  24.9€  |livré|
+|  SD Carte |  1  |  9.80€  |livré|
+|  Caméra Pi |  1  |  27,60 €  |https://www.gotronic.fr/art-module-camera-5-mp-raspberry-pi-rpi04v2-24876.htm|
+|  Moniteur |   1  |-|-|
+|  Vitre sans tain |   1( même taille du moniteur )|-|-|
+|  Module enregistreur (micro + haut parleur) |   1  |  9,50 €  |https://www.gotronic.fr/art-module-enregistreur-20s-isd1820-25652.htm|
+|  Câble HDMI   |   1  |  5,75 €  |https://www.amazon.fr/gp/product/B00870ZHCQ/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=B00870ZHCQ&linkCode=as2&tag=website0b2-21|
 
 ## Versions
 
