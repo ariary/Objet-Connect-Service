@@ -1,9 +1,0 @@
-
-
-Description du Sprint1:
-
-On va équiper la Rasberry d'un bouton (capteur) et une led (actionneur).En appuiant sur le bouton, la Raspberry signal le serveur et le demande de se connecte au API Distance Matrix (de Google) pour récupérer les informations trafiques en temps réel. Une fois que les données sont récupérées (sous forme JSON), le serveur les transmet au raspberry qui par la suite allume la led.
-
-
-
- 
