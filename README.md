@@ -76,7 +76,7 @@ Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose 
 
 ### Version 1
 
-On va équiper la Rasberry d'un bouton (capteur) et une led (actionneur).En appuiant sur le bouton, la Raspberry signal le serveur et le demande de se connecte au API Distance Matrix (de Google) pour récupérer les informations trafiques en temps réel. Une fois que les données sont récupérées (sous forme JSON), le serveur les transmet au raspberry qui par la suite allume la led.
+On va équiper la Raspberry d'un bouton (capteur) et une led (actionneur). En appuyant sur le bouton, la Raspberry signal le serveur et le demande de se connecte à l’API Distance Matrix (de Google) pour récupérer les informations trafiques en temps réel. Une fois que les données sont récupérées (sous forme JSON), le serveur les transmet au Raspberry qui par la suite allume la led.
 
 ### Version 2
 
