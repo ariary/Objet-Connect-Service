@@ -1,6 +1,9 @@
 #Miroir Magique 
 # @author : Zeineb Ben Aouicha 
 
+
+
+
 #Importation du librairies time et grovepi
 import time 
 import grovepi
