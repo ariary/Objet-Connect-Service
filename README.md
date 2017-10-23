@@ -85,5 +85,5 @@ Dans ce sprint, on ajoute un simple traitement sur les données collectées:
 - Détecte un utilisateur   --->   Afficher les informations trafiques sur la miroir
 - Pas d'utilisateur        --->   Rien est afficher sur la miroir
 
-Tout d'abords, on remplace le bouton par un capteur de présence qui joue le rôle de la caméra jusqu'à présent. Dès que le capteur de présence détecte l'utilisateur, le Raspberry envoie au serveur une requète pour récupérer les informations trafiques. Le serveur se connecte au API et envoie les informations demandées qui sera affichée sur l'écran jusqu'à le capteur de présence ne détecte plus l'utilisateur.
+Tout d'abords, on remplace le bouton par un capteur de présence qui joue le rôle de la caméra jusqu'à présent. Dès que le capteur de présence détecte l'utilisateur, le Raspberry affiche un message "Bienvenue" sur l'écran et envoie au serveur une requète pour récupérer les informations trafiques. Le serveur se connecte au API et envoie les informations demandées qui sera affichée sur l'écran jusqu'à le capteur de présence ne détecte plus l'utilisateur.
 
