@@ -7,6 +7,7 @@
 #Importation du librairies time et grovepi
 import time 
 import grovepi
+import os
 #Button branchee sur la pin d3 du grove
 button=3
 #RGB Led branchee sur la pin d7 du grove
@@ -24,6 +25,8 @@ while True:
 		#Traitement lorsqu'on appui sur le button 
 		if grovepi.digitalRead(button)==1:
 			print("Personne present")
+			#call web service
+			os.system('python srebess.py')
 			#Selection du couleur vert
 			grovepi.storeColor(0,255,0)
 			#allumer la Led avec cette  (vert)
@@ -36,3 +39,4 @@ while True:
 			grovepi.chainableRgbLed_pattern(pin,0,0)
 	except IOError:
         print "Error"
+		
