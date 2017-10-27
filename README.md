@@ -49,7 +49,7 @@ Marie X est une mère de 3 enfants. Tellement son emploi est encombré entre le 
 
 <p align="center">
 
-!![Miroir Magic](https://github.com/ariary/Objet-Connect-Service/blob/master/miroir%20magique.png)
+![Miroir Magic](https://github.com/ariary/Objet-Connect-Service/blob/master/miroir%20magique.png)
 
 </p>
 
