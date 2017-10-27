@@ -61,15 +61,14 @@ Marie X est une mère de 3 enfants. Tellement son emploi est encombré entre le 
 |  Raspberry Pi 3	     |  1   |  44.95€ |livré|
 |  GrovePi | 1   |  37.21€  |livré|
 |  SD Carte |  1  |  9.80€  |livré|
-|  Caméra Pi |  1  |  27,60 €  |https://www.gotronic.fr/art-module-camera-5-mp-raspberry-pi-rpi04v2-24876.htm|
+| Capteur de distance |  1  |  6.2 €  |https://www.gotronic.fr/art-detecteur-de-distance-ir-grove-101020175-26434.htm|
 |  Moniteur |   1  |-|-|
 |  Vitre sans tain |   1( même taille du moniteur )|-|-|
-|  Module enregistreur (micro + haut parleur) |   1  |  9,50 €  |https://www.gotronic.fr/art-module-enregistreur-20s-isd1820-25652.htm|
-|  Câble HDMI   |   1  |  5,75 €  |https://www.amazon.fr/gp/product/B00870ZHCQ/ref=as_li_ss_tl?ie=UTF8&camp=1642&creative=19458&creativeASIN=B00870ZHCQ&linkCode=as2&tag=website0b2-21|
+|  Module enregistreur (micro + haut parleur) |   1  |  -  |livré|
+|  Câble HDMI   |   1  |  5 €  |https://www.gotronic.fr/art-cable-dore-hdmi11-15432.htm|
+|  Détecteur de lumière  |   1  |  3.05 €  |https://www.gotronic.fr/art-detecteur-de-lumiere-grove-v1-2-101020132-25427.htm|
 
 ## Versions
-
-
 
 ### Version 1
 
