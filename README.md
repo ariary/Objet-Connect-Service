@@ -26,13 +26,8 @@ En se connectant a divers services web (comme la météo, les bus, les mails), d
 
 *Comment ça fonctionne ?*
  
-Le miroir est équipé d'une caméra permettant de savoir si une personne se regarde dans le miroir. Le but à terme étant de mettre un algorithme de reconnaissance faciale afin de fournir des informations plus personnalisées, on peut aussi imaginer mettre en place un capteur de présence. Ceci permettrait de ne pas faire tourner la camera et donc l'algorithme en permanence et ainsi de les declencher qu'en cas de présence. 
-
-
-
-Une fois que l'on sait qu'une personne se regarde dans le miroir, on affiche sur le miroir les informations / services.
-
-
+Le miroir est équipé d'un capteur de présence permettant de savoir si une personne est présent devant le miroir. Le but à terme étant de mettre une condition (qui est la présence de l'utilisateur) afin de déclencher le fonctionnement du miroir. 
+Une fois que l'on sait qu'une personne est devant le miroir, on affiche les informations et les services offertes .
 
 ## Scénarios d'utilisations 
 
@@ -42,11 +37,13 @@ Une fois que l'on sait qu'une personne se regarde dans le miroir, on affiche sur
 Thomas X est un employé chez TopExport. Chaque matin il prend le bus pour aller au travail. Son rituel est simple : réveil, petit dej', douche, vêtements, bus..  Mais ce matin le traffic est fluide. Le serveur de Magic Miror reçoit cette informations et se rend compte qu'en prenant le bus d'après Thomas sera quand même a l'heure. Lorsque Thomas sortira de la douche et qu'il se regardera dans le miroir, une notification lui signalera qu'il peut prendre son temps et lui indiquira l'horaire du bus inverse.  (On peut également penser au scénario inverse, Thomas est en retard.  Dans ce cas le miroir pourrait lui proposer d'envoyer un message aux participants de son rendez-vous pour leurs annoncer le retard) 
 Web-service utilisés : Agenda, Info trafic, horaire bus 
 
-
-
 ### Scénario 2
 
-Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose pas appeler ses petits enfants trop souvent, elle a peur de les déranger. Magic Miror permet à ses petits enfants de lui envoyer un message et/ou une image qui lui seront affichés sur le miroir lorsqu'elle se regardera.
+Manelle X est une grand mère très attaché a sa famille. Cependant elle n'ose pas appeler ses petits enfants trop souvent, elle a peur de les déranger. Magic Miror permet à ses petits enfants de lui envoyer un message qui lui seront affichés sur le miroir.
+
+### Scénario 3
+
+Marie X est une mère de 3 enfants. Tellement son emploi est encombré entre le boulot et les enfants, elle oublie souvent la lumière ouverte. Grâce au miroir magique qui est équipé par un capteur de luminosité, elle n'a plus de soucis. Le miroir permet de gérer la lumière de la chambre automatiquement en fonction de la présence de la personne. C'est à dire si la personne est présente devant le miroir, il allume la lampe et vice versa (si le miroir ne détecte plus la personne et que la lumière est encore ouverte, le miroir ferme la lumière.).
 
 ## Croquis
 
