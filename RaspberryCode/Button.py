@@ -28,17 +28,23 @@ while True:
 			j_res=json.loads(.ask_service("traffic"))
 			#si l'état du traffic est mauvais
 			if j_res['traffic'] == "bad":
-				#...
+			    #mauvaise état du traffic
+				#Selection du couleur rouge
+			    grovepi.storeColor(255,0,0)
+			    #allumer la Led avec cette coleur(rouge)
+			    grovepi.chainableRgbLed_pattern(pin,0,0)
+			elif j_res['traffic'] == "usual":
+				#état normal du traffic
+				#Selection du couleur jaune
+			    grovepi.storeColor(255,255,0)
+			    #allumer la Led avec cette coleur(jaune)
+			    grovepi.chainableRgbLed_pattern(pin,0,0)
 			else:
-				#traffic habituel
-				if j_res['traffic'] == "usual":
-					#...
-				else: #excellent état du traffic
-					#...;
-			#Selection du couleur vert
-			grovepi.storeColor(0,255,0)
-			#allumer la Led avec cette  (vert)
-			grovepi.chainableRgbLed_pattern(pin,0,0)
+			    #excellent état du traffic
+			    #Selection du couleur vert
+			    grovepi.storeColor(0,255,0)
+			    #allumer la Led avec cette couleur(vert)
+			    grovepi.chainableRgbLed_pattern(pin,0,0)
 		else:
 			print("")
 			#Selection du couleur Rose
