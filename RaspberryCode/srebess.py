@@ -8,6 +8,6 @@ def ask_service(name):
 	print("after req")
 	#we don't use name for the moment
 	print("Bien consomme")
-	res=req.json
-	return res
+	print req.text
+	return req.text
 	
