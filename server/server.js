@@ -39,6 +39,7 @@ var instructions = function(req, res) { //req= request res= response
 	  }); 
 	}else{
 		console.log("unknown service:"+q.service);
+		res.write('{"traffic": "bad"}',function(err) { res.end(); });
 	}
 }
 

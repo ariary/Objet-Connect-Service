@@ -6,6 +6,7 @@ import time
 import grovepi
 import os
 import srebess
+import json
 #Button branchee sur la pin d3 du grove
 button=3
 #RGB Led branchee sur la pin d7 du grove
@@ -24,7 +25,16 @@ while True:
 		if grovepi.digitalRead(button)==1:
 			print("Personne present")
 			#call web service
-			srebess.ask_service("traffic")
+			j_res=json.loads(.ask_service("traffic"))
+			#si l'état du traffic est mauvais
+			if j_res['traffic'] == "bad":
+				#...
+			else:
+				#traffic habituel
+				if j_res['traffic'] == "usual":
+					#...
+				else: #excellent état du traffic
+					#...;
 			#Selection du couleur vert
 			grovepi.storeColor(0,255,0)
 			#allumer la Led avec cette  (vert)
