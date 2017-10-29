@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import request
+=======
+import requests
+
+>>>>>>> 9f4d46d1b12ce1a14fb0096dfa8deeaf8253c7c9
 import json 
   
 
