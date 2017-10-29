@@ -24,7 +24,7 @@ while True:
 		if grovepi.digitalRead(button)==1:
 			print("Personne present")
 			#call web service
-			srebess.ask_service("trafic")
+			srebess.ask_service("traffic")
 			#Selection du couleur vert
 			grovepi.storeColor(0,255,0)
 			#allumer la Led avec cette  (vert)
