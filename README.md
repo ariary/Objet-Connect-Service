@@ -76,10 +76,12 @@ La première étape de ce sprint consiste à équiper notre Raspberry par un bou
 
 ### Version 2
 
-Dans ce sprint, on ajoute un simple traitement sur les données collectées:
+Dans ce Sprint, la détection de présence reste toujours à travers le bouton puisqu’on a pas encore le capteur de présence. 
 
-- Détecte un utilisateur   --->   Afficher les informations trafiques sur la miroir
-- Pas d'utilisateur        --->   Rien est afficher sur la miroir
+Donc, la première étape est d’appliquer la nouvelle architecture présentée ci-dessus. C’est à dire, lorsqu’on  clique sur le bouton, le Raspberry pi se connecte au Broker et publie les données au format JSON dans le Topic « push_button ». Pour exploiter ses données notre serveur (c à d la partie applicative de notre système ) doit s’inscrire au même Topic. Dès que notre côté applicative détecte la présence de la personne (bouton cliqué), il se connecte au API Distance matrix de Google qui présente notre premier service pour récupérer l’état du trafic. Ce résultat obtenu soit transféré au Broker qui par la suite l’affiche sur le Raspberry.
 
-Tout d'abords, on remplace le bouton par un capteur de présence qui joue le rôle de la caméra jusqu'à présent. Dès que le capteur de présence détecte l'utilisateur, le Raspberry affiche un message "Bienvenue" sur l'écran et envoie au serveur une requète pour récupérer les informations trafiques. Le serveur se connecte au API et envoie les informations demandées qui sera affichée sur l'écran jusqu'à le capteur de présence ne détecte plus l'utilisateur.
+Une fois ceci est fait, nous allons utiliser la même architecture lors de la récupération des données du capteur de lumière. De façon que notre Raspberry se connecte au Broker et publie les données au format JSON dans le Topic “push_lumière”. Le serveur fait un subscribe au même Topic, récupère les données et fait un simple traitement en vérifiant la luminosité de la chambre et renvoie une réponse au Broker, s’il faut changer la luminosité de la lampe. On peut simuler ce scénario en utilisant Wcomp pour communiquer notre broker à une lampe connectée. D’où l’utilité de cette architecture.
+
+Finalement, on doit permettre la communication avec service météo qui est déjà effectuée.
+
 
