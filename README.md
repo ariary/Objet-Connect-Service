@@ -85,3 +85,12 @@ Une fois ceci est fait, nous allons utiliser la même architecture lors de la r�
 Finalement, on doit permettre la communication avec service météo qui est déjà effectuée.
 
 
+### Version 3
+
+On a une architecture utilisant un broker permettant aussi au mirroir d'avoir cette fonctionnalité d' "afficheur". le miroir utilise déjà des capteurs de présence, de luminosité. On peut imaginer un scénario où le detecteur de présence ne detecte lus de présence et dans un même temps la lumière est allumé. Si la lumière utilise le protocole WCOMP on peut alors l'éteindre.
+Au niveau des services on peut donner l'état du traffic (qui est communiqué à l'utilisateur lorsque celui-ci est détecté devant le miroir) et la météo.
+
+Le but de la version 3 est de prendre en compte le micro. Au niveau des services, synchroniser les mails de l'utilisateur.
+Ceci pour répondre au scénario suivant: un utilisateur se présente devant le miroir, le miroir lui signale qu'il a un mail d'une personne en particulier (que l'on configure auparavant), en utilisant le micro (par exemple avec la commande "lire") le miroir lui affiche.
+
+
