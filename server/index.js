@@ -40,14 +40,17 @@ app.listen(8080, function() {
 
 
 //MQTT
+
+var request = require("request");
 const mqtt = require('mqtt')
 const client = mqtt.connect('mqtt://broker.hivemq.com')
 
 var connected = false;
 
 client.on('connect', () => {
-  client.subscribe('mirror/led');
+  client.subscribe('mirror/traffic');
   client.subscribe('mirror/presence');
+  client.subscribe('mirror/resistanceLumiere');
 })
 
 
@@ -63,6 +66,8 @@ client.on('message', (topic, message) => {
       return handlePresence(message)
     case 'mirror/led':
       return handleLed(message)
+    case 'mirror/resistanceLumiere':
+      return handleResistance(message)
     
   }
   console.log('No handler for topic %s', topic)
@@ -79,6 +84,20 @@ function handleLed (message) {
   getWeatherService();
 }
 
+function handleResistance (message) {
+  console.log('new message in topic mirror/resistanceLumiere: %s', message)
+  var treshold=10;
+  if (message > treshold ){
+      console.log("zone sans lumiere");
+      client.publish('mirror/lampe' , "Allumer lumiere" ,{qos: 1});
+    }
+  else {
+     console.log("zone avec lumiere");
+     client.publish('mirror/lampe' , "Eteindre lumiere" ,{qos: 1});
+  }
+    
+}
+
 function getWeatherService(){
   console.log("send meteo");
 }
@@ -87,9 +106,10 @@ function getWeatherService(){
 function  getTraficservice(){
   if ((dst=="")||(dep=="")) {
     console.log("No itinary known");
+     client.publish('mirror/traffic' , "error" ,{qos: 1})
   }else{
     var treshold=600;
-    request("https://maps.googleapis.com/maps/api/distancematrix/json?origins="+dep+"&destinations="+dst+"&mode=driving&departure_time=now&traffic_model=best_guess&language=fr-FR&key=AIzaSyBfwmxGEnUSlilAXOkAkXbZeskaYJ5Gsak", function(error, response, body) {
+    request("https://maps.googleapis.com/maps/api/distancematrix/json?origins=Cannes&destinations=Nice&mode=driving&departure_time=now&traffic_model=best_guess&language=fr-FR&key=AIzaSyBfwmxGEnUSlilAXOkAkXbZeskaYJ5Gsak", function(error, response, body) {
     //pessimistic, optimistic, best_guess;
     try {
       var obj = JSON.parse(body); //Parsing JSON
@@ -103,15 +123,15 @@ function  getTraficservice(){
       if (current_time-usual_time>=treshold) {
         console.log("Bad traffic condition");
 
-        client.publish('mirror/led' , "red" ,{qos: 1})
+        client.publish('mirror/traffic' , "Bad traffic condition" ,{qos: 1})
         // color="red";
       }else if(current_time-usual_time>=-treshold){
         console.log("Usual traffic condition ");
-         client.publish('mirror/led', "yellow",{qos: 1})
+         client.publish('mirror/led', "Usual traffic condition ",{qos: 1})
         // color="red";
       } else {
         console.log("Excellent traffic condition ");
-        client.publish('mirror/led', "green",{qos: 1})
+        client.publish('mirror/led', "Excellent traffic condition ",{qos: 1})
         // color="red";
       };
     } catch (e){
