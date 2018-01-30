@@ -1,3 +1,5 @@
+var request = require("request");
+
 //CONFIGURATION MIRROR
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -10,10 +12,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/itineraryPrefs', function(req, res) {
   //res.send('You sent the name "' + req.body.name + '".');
-  res.send('Changes saved');
-  console.log("New itinary: dep="+req.body.departure+" dest="+req.body.destination );
-  dep = req.body.departure;
-  dst = req.body.destination
+  /*Validity address verifification */
+  request("https://maps.googleapis.com/maps/api/distancematrix/json?origins="+req.body.departure+"&destinations="+req.body.destination+"&mode=driving&departure_time=now&traffic_model=best_guess&language=fr-FR&key=AIzaSyBfwmxGEnUSlilAXOkAkXbZeskaYJ5Gsak", function(error, response, body) {
+  try {
+    var obj = JSON.parse(body); //Parsing JSON
+    var status = obj.rows[0].elements[0].status;//Retrieve status
+    
+    if (status == "NOT_FOUND") {
+      console.log("not_found: addresses specified may be incorrect");
+      return res.send('Please check the validity of the addresses specified');
+    }else{
+      console.log("New itinary: dep="+req.body.departure+" dest="+req.body.destination );
+      dep = req.body.departure;
+      dst = req.body.destination;
+      return res.send('Changes saved');
+    }
+
+  } catch (e){
+    console.error("Parsing error:",e);
+  }
+  });
 });
 
 app.listen(8080, function() {
@@ -22,8 +40,6 @@ app.listen(8080, function() {
 
 
 //MQTT
-
-var request = require("request");
 const mqtt = require('mqtt')
 const client = mqtt.connect('mqtt://broker.hivemq.com')
 
@@ -73,7 +89,7 @@ function  getTraficservice(){
     console.log("No itinary known");
   }else{
     var treshold=600;
-    request("https://maps.googleapis.com/maps/api/distancematrix/json?origins=Cannes&destinations=Nice&mode=driving&departure_time=now&traffic_model=best_guess&language=fr-FR&key=AIzaSyBfwmxGEnUSlilAXOkAkXbZeskaYJ5Gsak", function(error, response, body) {
+    request("https://maps.googleapis.com/maps/api/distancematrix/json?origins="+dep+"&destinations="+dst+"&mode=driving&departure_time=now&traffic_model=best_guess&language=fr-FR&key=AIzaSyBfwmxGEnUSlilAXOkAkXbZeskaYJ5Gsak", function(error, response, body) {
     //pessimistic, optimistic, best_guess;
     try {
       var obj = JSON.parse(body); //Parsing JSON
