@@ -22,10 +22,13 @@ app.post('/itineraryPrefs', function(req, res) {
       console.log("not_found: addresses specified may be incorrect");
       return res.send('Please check the validity of the addresses specified');
     }else{
+              getWeatherService();
+
       console.log("New itinary: dep="+req.body.departure+" dest="+req.body.destination );
       dep = req.body.departure;
       dst = req.body.destination;
       return res.send('Changes saved');
+
     }
 
   } catch (e){
@@ -99,7 +102,23 @@ function handleResistance (message) {
 }
 
 function getWeatherService(){
-  console.log("send meteo");
+  let apiKey = "938663da30c993fe49ae9857bfd35600";
+  var city = "nice";
+  let Weatherurl = 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=Metric&APPID='+apiKey;
+  request(Weatherurl, function (err, response, body) {
+  if(err){
+    console.log('error:', error);
+  } else {
+      try {
+        console.log('body:', body);
+        var weather = JSON.parse(body);
+        console.log(" It is "+weather.main.temp+" degree in "+weather.name);
+        
+      }catch(e){
+        console.error("Parsing error:",e);
+}
+  }
+});
 }
 
 
