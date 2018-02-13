@@ -43,10 +43,26 @@ app.post('/itineraryPrefs', function(req, res) {
       connection.connect(function(err) { //ajout db
         if (err) throw err;
         console.log("Connection with db ok!");
-        var sql = "INSERT INTO mirrors (id,dep, dest) VALUES ("+id+",'"+dep+"', '"+dst+"')";
-        connection.query(sql, function (err, result) {
+        //INSERT INTO or UPDATE
+        connection.query("SELECT * FROM mirrors WHERE id = "+id+"", function (err, result, fields) {
           if (err) throw err;
-          console.log("Modification of user (id)");
+          if (result.length > 0) {
+            var sql = "UPDATE mirrors SET dep = '"+dep+"',dest='"+dst+"' WHERE id = "+id;
+
+            connection.query(sql, function (err, result) {
+              if (err) throw err;
+              console.log("Modification of itinerary of user (id):"+id);
+            });
+
+          }else{
+
+            var sql = "INSERT INTO mirrors (id,dep, dest) VALUES ("+id+",'"+dep+"', '"+dst+"')";
+      
+            connection.query(sql, function (err, result) {
+              if (err) throw err;
+              console.log("initialization of itinerary of user (id):"+id);
+            });
+          }
         });
       });
       return res.send('Changes saved');
@@ -63,7 +79,4 @@ app.listen(8080, function() {
 });
 
 
-// /!\
-// Pour l'instant on ne peut pas modifier une valeure déjà éxistante 
-// .ie. à chaque fois on crée une nouvelle entrée on update pas
-// le fichier create_db.js sert à créer la db mirrors 
+// /!\ On peut pas faire deux requêtes d'affilées
