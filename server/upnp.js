@@ -46,12 +46,25 @@ var service = device.createService({
 	// Service Implementation
 	implementation: {
 		GetTraffic: function(inputs){
-			this.set("Target",requestSQL(inputs.UserValue)
+/*			this.set("Target",requestSQL(inputs.UserValue)
 				.then((params)=>requestTraffic(params))
 				.catch(function(error) {
 					console.log("Error:"+error)
 				}));
-			this.notify("Target");
+			this.notify("Target");*/
+			var res;
+			Promise.all([requestSQL(inputs.UserValue)])
+			  .then(function(results_sql) {
+			    var route = results_sql[0];  // request SQL
+			    console.log(console.log('before: '+ route))
+			    Promise.all([requestTraffic(route)])
+			      .then(function(results_traffic) {
+			        var res = results_traffic[0];  // contents of the first csv file
+			        console.log("IIIIIIII : "+res)
+			        service.set("Target",res);
+			      });
+			  });
+
 			return {RetTrafficValue: this.get("Target")};
 		},
 		SetTarget: function(inputs){
@@ -59,7 +72,6 @@ var service = device.createService({
 			this.set("Target", inputs.NewTargetValue); 
 			// notify state change of the state variable to all subscribers
 			this.notify("Target");
-			this.get("Target") == "1"? console.log("Want the traffic"):console.log("No traffic required");
 		},
 		GetStatus: function(inputs){
 			// the result is the value of the state variable Target
@@ -132,36 +144,38 @@ function requestSQL (id) {
 
 
 function requestTraffic(params){
-	var request = require("request");
-	var treshold=600; // in seconds	
-	var result;
-	request("https://maps.googleapis.com/maps/api/distancematrix/json?origins="+params[0]+"&destinations="+params[1]+"&mode=driving&departure_time=now&traffic_model=best_guess&language=fr-FR&key=AIzaSyBfwmxGEnUSlilAXOkAkXbZeskaYJ5Gsak", function(error, response, body) {
-	//pessimistic, optimistic, best_guess;
-	try {
-	  var obj = JSON.parse(body); //Parsing JSON
+	return new Promise(function (resolve, reject) {
+		var request = require("request");
+		var treshold=600; // in seconds	
+		var result;
+		request("https://maps.googleapis.com/maps/api/distancematrix/json?origins="+params[0]+"&destinations="+params[1]+"&mode=driving&departure_time=now&traffic_model=best_guess&language=fr-FR&key=AIzaSyBfwmxGEnUSlilAXOkAkXbZeskaYJ5Gsak", function(error, response, body) {
+		//pessimistic, optimistic, best_guess;
+		try {
+		  var obj = JSON.parse(body); //Parsing JSON
 
-	  //Retrieve duration
-	  var elements = obj.rows[0].elements;
-	  var usual_time = elements[0].duration.value;
-	  var current_time = elements[0].duration_in_traffic.value;
+		  //Retrieve duration
+		  var elements = obj.rows[0].elements;
+		  var usual_time = elements[0].duration.value;
+		  var current_time = elements[0].duration_in_traffic.value;
 
-	  //define traffic condition
-	  if (current_time-usual_time>=treshold) {
-	    result="bad"; 
-	    console.log("[RETRIEVE TRAFFIC]: "+result);
-	    return result;
-	  }else if(current_time-usual_time>=-treshold){
-	    result="usual"; 
-	    console.log("[RETRIEVE TRAFFIC]: "+result);
-	    return result;
-	  } else {
-	    result="excellent";
-	    console.log("[RETRIEVE TRAFFIC]: "+result);
-	    return result; 
-	  };
-	} catch (e){
-	  console.error("Parsing error:",e);
-	}
+		  //define traffic condition
+		  if (current_time-usual_time>=treshold) {
+		    result="bad"; 
+		    console.log("[RETRIEVE TRAFFIC]: "+result);
+		  }else if(current_time-usual_time>=-treshold){
+		    result="usual"; 
+		    console.log("[RETRIEVE TRAFFIC]: "+result);
+		  } else {
+		    result="excellent";
+		    console.log("[RETRIEVE TRAFFIC]: "+result);
+		  }
+		  resolve(result);
+		} catch (e){
+		  console.error("Parsing error:",e);
+		}
+		});
 	});
 }
+
+
 
