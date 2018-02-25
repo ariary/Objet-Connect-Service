@@ -108,8 +108,8 @@ var service = device.createService({
 		}
 	}
 });
-// initialize the Target State Variable with 0
-service.set("Target","0");
+// initialize the Target State Variable with "usual"
+service.set("Target","usual");
 
 
 function requestSQL (id) {
