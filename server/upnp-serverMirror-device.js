@@ -13,11 +13,37 @@ var peer = upnp.createPeer({
 	console.log("ready");
 	// advertise device after peer is ready
 	device.advertise();
+	    // search for Mirror UPnP Devices with PresenceService
+		peer.on("urn:schemas-upnp-org:service:PresenceService:1",function(service){
+			console.log("PresenceService  found");
+	        // get notified when device disappears
+			service.on("disappear",function(service){
+				console.log("service "+service.serviceType+" disappeared");
+			});
+	        // bind to the service in order to call its methods
+	        // bind will generate a JavaScript function for each service method.
+	        // Inputs and outputs are JSON objects where the keys are the name of the
+	        // inputs or outputs.
+			service.bind(function(service){
+	            // Call UPnP interface SetTarget of SwitchPower Service
+	            console.log("Call GetPresence");
+				service.GetPresence({
+				},function(res){
+					console.log("GetPresence done:"+res);
+				});
+			}).on("event",function(data){
+				console.log("Receive update from Presence Service: ",data);
+			});
+	        // Stop receiving updates after 10 seconds
+			setTimeout(function(){
+				//service.removeAllListeners("event");
+			},10000);
+		});
 }).on("close",function(peer){
 	console.log("closed");
 }).start();
 
-// Create a BinaryLight device as specified in UPnP http://upnp.org/specs/ha/UPnP-ha-BinaryLight-v1-Device.pdf.  
+// Create a Server Mirror device
 // Please refer for device configuration parameters to the UPnP device architecture.
 var device = peer.createDevice({
 	autoAdvertise: false,
@@ -25,13 +51,13 @@ var device = peer.createDevice({
 	productName: "Coltram",
 	productVersion: "0.0.1",
 	domain: "schemas-upnp-org",
-	type: "Mirror",
+	type: "Server Mirror",
 	version: "1",
-	friendlyName: "Mirror",
+	friendlyName: "Server Mirror",
 	manufacturer: "Fraunhofer FOKUS",
 	manufacturerURL: "http://www.fokus.fraunhofer.de",
-	modelName: "Mirror",
-	modelDescription: "Mirror",
+	modelName: "Server Mirror",
+	modelDescription: "Server Mirror",
 	modelNumber: "0.0.1",
 	modelURL: "http://www.famium.org",
 	serialNumber: "1234-1234-1234-1234",
