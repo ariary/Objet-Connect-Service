@@ -56,11 +56,9 @@ var service = device.createService({
 			Promise.all([requestSQL(inputs.UserValue)])
 			  .then(function(results_sql) {
 			    var route = results_sql[0];  // request SQL
-			    console.log(console.log('before: '+ route))
 			    Promise.all([requestTraffic(route)])
 			      .then(function(results_traffic) {
-			        var res = results_traffic[0];  // contents of the first csv file
-			        console.log("IIIIIIII : "+res)
+			        var res = results_traffic[0];  // request traffic
 			        service.set("Target",res);
 			      });
 			  });
