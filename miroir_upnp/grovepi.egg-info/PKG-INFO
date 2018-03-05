@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: grovepi
+Version: 1.0.1
+Summary: Drivers for using the GrovePi+ in Python
+Home-page: https://github.com/DexterInd/GrovePi
+Author: Dexter Industries
+Author-email: contact@dexterindustries.com
+License: MIT
+Description: Check more on https://pypi.python.org/pypi/grovepi
+Keywords: robot,grovepi,grovepi+,dexter industries,learning,education,iot,internet of things,prototyping
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

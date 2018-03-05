@@ -1,0 +1,23 @@
+# Miroir Magic
+
+
+Branchement des capteurs :
+ 
+ - led : digital 7 (D7)
+   
+ - capteur distance: digital  (D)
+  
+ - capteur luminosité : digital  (D)
+   
+ - microphone : 
+   
+
+Pour récupérer l'UUID en cas où vous avez changer le Raspberry, lancez cette commande : 
+sudo lsblk -o UUID
+uuid : "d4f0fd64-ad9d-4cfd-aa76-8d3541fbf008"
+
+Installation: 
+
+1/ Connecter au Raspberry : 
+- login: pi 
+- mdp:pi
